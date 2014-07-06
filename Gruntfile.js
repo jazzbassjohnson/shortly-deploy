@@ -8,7 +8,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: ['app/**/*.js', 'lib/*.js', 'public/**/*.js'],//could also concat the sever files
-        dest: 'dist/built.js',
+        dest: './public/dist/built.js',
       },
     },
 
@@ -28,11 +28,11 @@ module.exports = function(grunt) {
     },
 
     uglify: {
-      // my_target: {
-      //   files: {
-      //     'dest/output.min.js': ['src/input1.js', 'src/input2.js']
-      //   }
-      // }
+      options: {},
+      dist: {
+        src: ['./public/dist/built.js'],
+        dest: './public/dist/uglified.js'
+      }
     },
 
     jshint: {
